@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
+import Welcome from '../components/Welcome'
+import users from '../components/user/users'
 
 // import Home from '../views/Home.vue'
 
@@ -11,7 +13,15 @@ const router = new VueRouter({
   routes: [
     { path: '/', redirect: '/login' },
     { path: '/login', component: Login },
-    { path: '/home', component: Home }
+    {
+      path: '/home',
+      component: Home,
+      redirect: '/welcome',
+      children: [{ path: '/welcome', component: Welcome },
+        { path: '/users', component: users }
+      //  当前的地址 这个地址是不可以更改 和 要显示的组件
+      ]
+    }
   ]
 })
 // 挂载路由导航守卫
