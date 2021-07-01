@@ -6,6 +6,7 @@ import Welcome from '../components/Welcome'
 import users from '../components/user/users'
 import Rights from '../components/power/Rights'
 import Roles from '../components/power/Roles'
+import Cate from '../components/goods/Cate'
 // import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
@@ -21,7 +22,8 @@ const router = new VueRouter({
       children: [{ path: '/welcome', component: Welcome },
         { path: '/users', component: users },
         { path: '/rights', component: Rights },
-        { path: '/roles', component: Roles }
+        { path: '/roles', component: Roles },
+        { path: '/Categories', component: Cate }
       //  当前的地址 这个地址是不可以更改 和 要显示的组件
       ]
     }
