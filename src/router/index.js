@@ -8,6 +8,8 @@ import Rights from '../components/power/Rights'
 import Roles from '../components/power/Roles'
 import Cate from '../components/goods/Cate'
 import Params from '../components/goods/Params'
+import Goodlist from '../components/goods/List'
+import Add from '../components/goods/Add'
 // import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
@@ -25,7 +27,9 @@ const router = new VueRouter({
         { path: '/rights', component: Rights },
         { path: '/roles', component: Roles },
         { path: '/categories', component: Cate },
-        { path: '/params', component: Params}
+        { path: '/params', component: Params },
+        { path: '/goods', component: Goodlist },
+        { path: '/goods/add', component: Add }
       //  当前的地址 这个地址是不可以更改 和 要显示的组件
       ]
     }
