@@ -12,6 +12,7 @@ import Goodlist from '../components/goods/List'
 import Add from '../components/goods/Add'
 // import Home from '../views/Home.vue'
 import Order from '../components/order/Order'
+import Report from '../components/report/Report'
 
 Vue.use(VueRouter)
 
@@ -31,7 +32,8 @@ const router = new VueRouter({
         { path: '/params', component: Params },
         { path: '/goods', component: Goodlist },
         { path: '/goods/add', component: Add },
-        { path: '/orders', component: Order }
+        { path: '/orders', component: Order },
+        { path: '/reports', component: Report }
       //  当前的地址 这个地址是不可以更改 和 要显示的组件
       ]
     }
